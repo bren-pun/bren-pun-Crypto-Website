@@ -1,7 +1,9 @@
+import { ArrowBack } from "@mui/icons-material";
 import {
   Avatar,
   Box,
   Container,
+  IconButton,
   Paper,
   Stack,
   Table,
@@ -9,7 +11,7 @@ import {
 } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Content from "./Content";
 import TradingViewWidget from "./TradingViewWidget";
 
@@ -49,6 +51,11 @@ const CoinPage = () => {
       }}
       maxWidth
     >
+      <IconButton>
+        <Link to={-1}>
+          <ArrowBack sx={{ color: "white" }} />
+        </Link>
+      </IconButton>
       <Stack
         direction="row"
         justifyContent="flex-start"

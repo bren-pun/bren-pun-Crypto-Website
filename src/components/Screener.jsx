@@ -1,6 +1,8 @@
-import { Container, Divider, Typography } from "@mui/material";
+import { ArrowBack, GitHub } from "@mui/icons-material";
+import { Container, Divider, IconButton, Typography } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import BasicTable from "./BasicTable";
 import SearchBar from "./SearchBar";
 
@@ -25,6 +27,11 @@ function Screener() {
         maxWidth
         sx={{ pt: 6, backgroundColor: "#131722", minHeight: "100vh" }}
       >
+        <IconButton>
+          <Link to={-1}>
+            <ArrowBack sx={{ color: "white" }} />
+          </Link>
+        </IconButton>
         <Typography variant="h4" color="#d1d4dc" py={3}>
           Crypto Screener
         </Typography>

@@ -14,18 +14,7 @@ import screencerpic from "../utils/cryptoScreener.png";
 import cryptochart from "../utils/cryptochart.png";
 import { ArrowRight, GitHub, Info, OpenInNew } from "@mui/icons-material";
 import bgImage from "../utils/tyler-lastovich-hM08wZJBlK4-unsplash.jpg";
-function Copyright() {
-  return (
-    <Typography variant="body2" color="white" align="center">
-      {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
+import { minWidth } from "@mui/system";
 
 const theme = createTheme();
 
@@ -59,7 +48,7 @@ export default function Album() {
               gutterBottom
               fontWeight="bold"
             >
-              Top 100 Cryptocurrencies
+              Top Crypto
             </Typography>
             <Typography variant="h5" align="center" color="white" paragraph>
               Built using React, Material-UI, and the Coingecko API by Bren
@@ -75,7 +64,7 @@ export default function Album() {
         </Box>
         <Container disableGutters>
           <Stack
-            direction={{ xs: "column", sm: "row" }}
+            direction={{ xs: "column", md: "row" }}
             gap={2}
             justifyContent="center"
           >
@@ -174,7 +163,6 @@ export default function Album() {
               <GitHub sx={{ color: "white" }} />
             </IconButton>
           </Stack>
-          <Copyright />
         </Box>
         {/* End footer */}
       </main>
