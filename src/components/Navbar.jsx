@@ -11,18 +11,9 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
+import { CurrencyBitcoin } from "@mui/icons-material";
 
 const pages = [
-  {
-    navId: "1",
-    navName: "Contact",
-    navLink: "/contact",
-  },
-  {
-    navId: "2",
-    navName: "About",
-    navLink: "/about",
-  },
   {
     navId: "3",
     navName: "Screeners",
@@ -32,6 +23,11 @@ const pages = [
     navId: "4",
     navName: "Charts",
     navLink: "/bitcoin",
+  },
+  {
+    navId: "2",
+    navName: "About",
+    navLink: "/about",
   },
 ];
 
@@ -50,7 +46,10 @@ function ResponsiveAppBar() {
     <AppBar position="static" sx={{ bgcolor: "#131722" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <CurrencyBitcoin
+            sr
+            sx={{ display: { xs: "none", md: "flex" }, mr: 0.3 }}
+          />
           <Typography
             variant="h6"
             noWrap
@@ -66,7 +65,7 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            LOGO
+            REN
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
