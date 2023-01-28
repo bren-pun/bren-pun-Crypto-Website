@@ -51,7 +51,7 @@ export default function Album() {
               Top Crypto
             </Typography>
             <Typography variant="h5" align="center" color="white" paragraph>
-              Built using React, Material-UI, and the Coingecko API by Bren
+              Built using React, Material-UI, and Coingecko API by Bren
               Punzalan.
             </Typography>
             <Stack
